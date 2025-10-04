@@ -13,8 +13,10 @@ private:
 	long _signed;
 	unsigned long _unsigned;
 public:
-	Longlong(long s, unsigned long us);
-	Longlong();
+	Longlong(long s, unsigned long us); // створює об'єкт з полями _signed = s та _unsigned = us
+	Longlong(unsigned long us); // створює об'єкт з полями _signed = us та _unsigned = us
+	Longlong(); // створює об'єкт з нульовими значеннями полей
+
 	Longlong* Init();
 	void Read();
 	void Display();
@@ -33,4 +35,3 @@ public:
 
 	void Negative();
 };
-

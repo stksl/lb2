@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 #include "Longlong.h"
 using namespace std;
 
@@ -9,6 +10,12 @@ Longlong::Longlong() {
 Longlong::Longlong(long s, unsigned long us) {
 	this->Init();
 	_signed = s;
+	_unsigned = us;
+}
+Longlong::Longlong(unsigned long us) {
+	this->Init();
+
+	_signed = us;
 	_unsigned = us;
 }
 

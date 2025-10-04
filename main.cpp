@@ -1,13 +1,15 @@
 ﻿#include "Longlong.h"
 #include <iostream>
+
+using namespace std;
 int main()
 {
-    Longlong f;
-    f.Read();
-    Longlong s;
-    s.Read();
+    Longlong f = Longlong(1);
+    Longlong s = Longlong(-15, 100);
 
-    cout << "\tAddition:";
+    f.Display();
+    s.Display();
+    cout << "\tAddition:\n";
 
     f.Add(&s); 
     f.Display();
