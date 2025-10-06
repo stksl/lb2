@@ -30,25 +30,45 @@ void Longlong::Read() {
 	cin >> _unsigned;
 }
 void Longlong::Display() {
-	cout << "Integer value: " << _signed << endl;
-	cout << "Positive integer value: " << _unsigned << endl;
+	cout << "Signed: " << _signed << endl;
+	cout << "Unsigned: " << _unsigned << endl;
 }
 string Longlong::toString() {
-	return "Signed: " + std::to_string(_signed) + "\nUnsigned: " + std::to_string(_unsigned);
+	return "Signed: " + std::to_string(_signed) + " Unsigned: " + std::to_string(_unsigned);
 }
 
 void Longlong::Add(Longlong* l) {
 	this->_signed += l->_signed; this->_unsigned += l->_unsigned;
 };
+Longlong Longlong::operator +(Longlong other) {
+	Longlong result{this->_signed + other._signed, this->_unsigned + other._unsigned};
+	return result;
+}
+
 void Longlong::Subtract(Longlong* l) {
 	this->_signed -= l->_signed; this->_unsigned -= l->_unsigned;
 }
+Longlong Longlong::operator -(Longlong other) {
+	Longlong result{this->_signed - other._signed, this->_unsigned - other._unsigned};
+	return result;
+}
+
 void Longlong::Multiply(Longlong* l) {
 	this->_signed *= l->_signed; this->_unsigned *= l->_unsigned;
 };
+Longlong Longlong::operator *(Longlong other) {
+	Longlong result{this->_signed * other._signed, this->_unsigned * other._unsigned};
+	return result;
+}
+
 void Longlong::Divide(Longlong* l) {
 	this->_signed /= l->_signed; this->_unsigned /= l->_unsigned;
 }
+Longlong Longlong::operator /(Longlong other) {
+	Longlong result{this->_signed / other._signed, this->_unsigned / other._unsigned};
+	return result;
+}
+
 void Longlong::Modulo(Longlong* l) {
 	this->_signed %= l->_signed; this->_unsigned %= l->_unsigned;
 }

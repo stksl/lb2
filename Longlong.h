@@ -24,9 +24,17 @@ public:
 
 	// бінарні операції 
 	void Add(Longlong* l);
+	Longlong operator +(Longlong other); // перевантаження операції додавання
+
 	void Subtract(Longlong* l);
+	Longlong operator -(Longlong other);// перевантаження операції віднімання
+
 	void Multiply(Longlong* l);
+	Longlong operator *(Longlong other);// перевантаження операції множення
+
 	void Divide(Longlong* l);
+	Longlong operator /(Longlong other);// перевантаження операції ділення
+
 	void Modulo(Longlong* l);
 
 	// унарні операції
